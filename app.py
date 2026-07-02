@@ -1,7 +1,19 @@
 
 import streamlit as st
+
+st.write("✅ App started")
+
 import pandas as pd
+st.write("✅ Pandas imported")
+
 import joblib
+st.write("✅ Joblib imported")
+
+st.write("Loading model...")
+
+model = joblib.load("knn_heart_model.pkl")
+
+st.success("✅ Model loaded")
 
 st.set_page_config(page_title="Heart Disease Prediction", page_icon="❤️", layout="wide")
 
